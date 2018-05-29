@@ -1,0 +1,6 @@
+awscli
+certbot
+certbot-dns-route53
+requests
+pyyaml
+toml

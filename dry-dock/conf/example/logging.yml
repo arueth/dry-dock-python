@@ -1,0 +1,2 @@
+# Available log levels: 'CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG'
+log_level: 'DEBUG'

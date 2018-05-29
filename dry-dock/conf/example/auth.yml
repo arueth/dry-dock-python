@@ -1,0 +1,18 @@
+auth:
+  backend: 'ldap'
+  ldap:
+    server_url: 'ldap://ldap.example.com'
+    reader_dn: 'CN=reader,OU=Users,OU=Example,DC=example,DC=com'
+    reader_password: <%= SECRET(/run/secrets/ldap_reader_password) %>
+    tls_skip_verify: True
+    start_tls: False
+    no_simple_pagination: False
+    jit_user_provisioning: False
+  user_search_configs:
+    base_dn: 'OU=Users,OU=Example,DC=example,DC=com'
+    filter: '(&(objectClass=person)(objectClass=user))'
+    full_name_attr: 'cn'
+    match_group_iterate: False
+    search_filter: ''
+    scope_subtree: True
+    username_attr: 'uid'

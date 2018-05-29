@@ -1,0 +1,7 @@
+email: user@example.com
+always_apply_certs:
+  dtr: False
+  ucp: False
+aws:
+  access_key_id: <%= SECRET(/run/secrets/aws_access_key_id) %>
+  secret_access_key: <%= SECRET(/run/secrets/aws_secret_access_key) %>

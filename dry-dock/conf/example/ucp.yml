@@ -1,0 +1,11 @@
+endpoint: 'ucp.example.com'
+use_ssl: True
+verify_ssl: True
+username: <%= SECRET(/run/secrets/ucp_username) %>
+password: <%= SECRET(/run/secrets/ucp_password) %>
+ssl_certificate:
+  domain_name: 'ucp.example.com'
+  sans:
+    - 'ucp-001.example.com'
+    - 'ucp-002.example.com'
+    - 'ucp-003.example.com'

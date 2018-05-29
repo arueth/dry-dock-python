@@ -1,0 +1,11 @@
+endpoint: 'dtr.example.com'
+use_ssl: True
+credentials:
+  username: <%= SECRET(/run/secrets/ucp_username) %>
+  password: <%= SECRET(/run/secrets/ucp_password) %>
+ssl_certificate:
+  domain_name: 'dtr.mgmt.dckr.org'
+  sans:
+    - 'dtr-001.example.com'
+    - 'dtr-002.example.com'
+    - 'dtr-003.example.com'

@@ -1,0 +1,2 @@
+class UnsupportedConfigError(Exception):
+    pass
